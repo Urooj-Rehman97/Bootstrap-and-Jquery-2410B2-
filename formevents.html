@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form Events</h1>
+     <form action="" id="u_form">
+        <input type="text" name="" id="input" placeholder="Enter your name"><br><br>
+        <input type="email" name="" id="input" placeholder="Enter your Email"><br><br>
+        <select name="" id="country">
+            <option value="Pakistan">Pakistan</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Iraq">Iraq</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+     </form>
+
+    <h2 id="display">
+
+    </h2>
+    <script src="JS/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            //focus
+            $("#input").focus(function(){
+                $(this).css({"border":"2px solid green", "outline":"none"});
+            });
+
+            //blur
+            $("#input").blur(function(){
+                $(this).css("border","1px solid black");
+            });
+
+            //select
+            $("#input").select(function(){
+                $(this).css("background-color","lightgray");
+            });
+
+            //change
+            $("#country").change(function(){
+                // $(this).css("background-color","aqua");
+                let c = $("#country").val();
+                $("#display").text(c);
+            });
+
+            //submit
+            $("#u_form").submit(function(){
+                alert("Submit Successfully");
+            });
+
+            //Keyboard Events
+            $("body").keypress(function(){
+                $(this).css("background-color","tomato");
+            });
+        });
+     </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/jquery-ui.css">
+</head>
+<body>
+    
+    <div class="ui-widget">
+        <label for="course">Courses:</label>
+        <input type="text" name="" id="course">
+    </div>
+    <script src="JS/jquery-3.7.1.js"></script>
+    <script src="JS/jquery-ui.js"></script>
+    <script>
+        let courses = [
+            "Web designing",
+            "Web Development",
+            "Digital Marketing",
+            "Software Engineering",
+            "SEO",
+            "E-Commerce",
+            "UI/UX",
+            "Graphic Designing"
+        ];
+
+        $(document).ready(function(){
+            $("#course").autocomplete({
+                source: courses
+            })
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .section{
+            width:60%;
+            height:400px;
+            margin:auto;
+            padding: 10px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        .portion{
+            background-color: lightgray;
+            color:maroon;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="section">
+        <h1>JQuery Class Functions</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit illum quas maiores repellendus libero eos
+            architecto sunt, deleniti vel natus quam eveniet consequuntur dolores, qui autem aspernatur consectetur
+            corrupti modi?</p>
+        
+    </div>
+    <script src="JS/jquery-3.7.1.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //addClass
+            // $(".section").click(function(){
+            //   $(this).addClass("portion");
+            // });
+
+            //removeClass
+            $(".section").dblclick(function(){
+                $(this).removeClass("portion");
+            });
+
+            //toggleClass
+            $(".section").click(function(){
+                $(this).toggleClass("portion");
+            });
+
+        });
+    </script>
+</body>
+
+</html>

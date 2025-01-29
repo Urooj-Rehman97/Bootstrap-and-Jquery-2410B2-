@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5" style="height:500px" >
+        <div class="row justify-content-evenly" id="box">
+            <!-- card1 -->
+            <div class="card" style="width: 18rem;">
+                <img src="images/banner.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            
+              <!-- card2 -->
+              <div class="card" style="width: 18rem;">
+                <img src="images/banner.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            <!-- card3 -->
+            <div class="card" style="width: 18rem;">
+                <img src="images/banner.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+        </div>
+    </div>
+ <div class="container">
+    <button class="btn btn-success ms-5" id="btn">Slide up</button>
+    <button class="btn btn-success m-1" id="btn1">Slide down</button>
+    <button class="btn btn-success m-1" id="btn2">Slide Toggle</button>
+ </div>
+    <script src="Js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            //slideup function
+            $("#btn").click(function(){
+                $("#box").slideUp(2000);
+            });
+
+            //slidedown function
+            $("#btn1").click(function(){
+                $("#box").slideDown(2000);
+            });
+
+            //slidetoggle function
+            $("#btn2").click(function(){
+                $("#box").slideToggle(2000);
+            });
+        });
+    </script>
+</body>
+</html>

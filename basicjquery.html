@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <title>Document</title>
+    
+</head>
+
+<body>
+<div class="content p-3 m-2 border border-black" >
+    <h1 id="heading">JQUERY BASIC SYNTAX</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste sunt adipisci, id harum facilis dolorem deserunt
+        praesentium repudiandae voluptatum magni ut qui magnam quisquam amet maiores? Earum hic pariatur ab aliquid,
+        labore repudiandae? Aliquam debitis expedita nisi necessitatibus ad, earum sint dignissimos quis quidem maiores
+        laudantium eos a molestiae consectetur dolor, sunt est pariatur. Earum accusantium corporis quo veritatis! Autem
+        laborum adipisci ut? Placeat quis expedita fugit incidunt recusandae molestias odio neque cupiditate at cum nemo
+        rem possimus qui sunt vel quia amet nulla, modi impedit eveniet perspiciatis. Harum maxime sunt optio quaerat
+        tenetur aspernatur! Dicta reprehenderit veniam aperiam blanditiis?</p>
+        <ul class="list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Bootstrap</li>
+            <li>JQuery</li>
+            <li>SEO</li>
+        </ul>
+</div>
+<br><br>
+<button id="hide_btn" class="m-3 ">Hide</button>
+<button id="show_btn" class="m-3 ">Show</button>
+
+<button id="toggle_btn" class="m-3 ">Toggle</button>
+
+    <script src="JS/jquery-3.7.1.js"></script>
+    <script>
+        // alert("Hello World");
+        $(document).ready(function () {
+            // alert("Hello World");
+            // $("#heading").css("background-color","aqua");
+            $("h1").css({"color":"maroon", "background-color":"aqua"});
+            // $("*").css("border","2px solid red");
+            // $(".list li:first").css("color","red");
+            // $(".list li:last").css("color","red");
+            $(".list li:eq(1)").css("color","red");
+            $(".list li:gt(1)").css("color","green");
+            $(".list li:lt(1)").css("color","blue");
+
+            //Hide function
+            $("#hide_btn").click(function(){
+                $(".content").hide(2000);
+            });
+
+
+            //show function
+            $("#show_btn").click(function(){
+                $(".content").show(2000);
+            });
+
+            //toggle function
+            $("#toggle_btn").click(function(){
+                $(".content").toggle(2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
